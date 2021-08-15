@@ -1,0 +1,67 @@
+.sidepanel {
+    position: fixed;
+    color: $color-white;
+    top: 205px;
+    left: 50px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 3;
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: $color-white;
+    }
+    &__text {
+        height: 150px;
+        width: 25px;
+
+        span {
+            display: block;
+            transform: rotate(-90deg) translate(-22%, -450%);
+            width: 150px;
+        }
+    }
+}
+
+.sidepanel__link {
+    transform: rotate(-90deg);
+    &:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    img {
+        width: 20px;
+    }
+}
+.icon-vk1 {
+    color: white;
+}
+.icon-instagram {
+    color: white;
+}
+.icon-whatsapp {
+    color: white;
+}
+.none {
+    display: none;
+}
+
+
+.sidepanels {
+    color: $color-black;
+}
+.dividers {
+    background-color: $color-black;
+}
+.icon-vk2 {
+    color: $color-black;
+}
+.icon-instagram2 {
+    color: $color-black;
+}
+.icon-whatsapp2 {
+    color: $color-black;
+}

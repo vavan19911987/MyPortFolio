@@ -1,0 +1,82 @@
+.resume {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 136px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $color-green;
+                border-radius: 50%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            li {
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                    background-color: $color-black;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: "";
+            height: 1px;
+            width: 43px;
+            position: absolute;
+            background-color: $color-black;
+            top: 62px;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            text-transform: lowercase;
+        }
+        &-icon {
+            position: absolute;
+            top: 45px;
+            left: 45px;
+            @include before_circle();
+            img {
+                position: absolute;
+                top: 14px;
+                left: 17px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            @include med();
+        }
+        &-body {
+            @include med ();
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}

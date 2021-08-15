@@ -1,0 +1,33 @@
+// others
+@import 'libs/mynormalize';
+@import 'libs/animate';
+@import 'base/fonts';
+@import 'base/colors';
+@import 'interface';
+@import 'base/mixin';
+
+
+
+// blocks
+@import 'blocks/promo';
+@import 'blocks/title';
+@import 'blocks/buttons';
+@import 'blocks/sidepanel';
+@import 'blocks/animation';
+@import 'blocks/hamburger';
+@import 'blocks/menu';
+@import 'blocks/about';
+@import 'blocks/resume';
+@import 'blocks/skills';
+@import 'blocks/portfolio';
+
+// media
+@import 'media/interfase';
+@import 'media/buttons';
+@import 'media/hamsburger';
+@import 'media/menu';
+@import 'media/promo';
+@import 'media/sidepanel';
+@import 'media/animation';
+@import 'media/about';
+@import 'media/resume';
