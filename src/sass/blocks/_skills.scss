@@ -29,23 +29,6 @@
             line-height: 18px;
         }
     }
-    &__title {
-        position: relative;
-        text-align: center;
-        color: $color-black;
-        @include before_circle();
-        &:before {
-            top: -12px;
-            left: 50%;
-            width: 45px;
-            height: 45px;
-
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
     &__ratings {
         margin-top: 120px;
         display: grid;
@@ -58,11 +41,24 @@
             justify-content: space-between;
             align-content: space-between;
         }
+        &-title {
+            position: relative;
+            padding: 2px 0 0 13px;
 
+            color: $color-black;
+
+            @include before_circle;
+
+        }
         &-counter {
             font-size: 14px;
             line-height: 21px;
         }
+        // &__subtitle {
+        //     // text-align: center;
+        // }
+
+
         &-line {
             width: 350px;
             height: 14px;
@@ -71,7 +67,6 @@
             grid-column: 1 / 3;
             position: relative;
             overflow: hidden;
-
             span {
                 display: block;
                 height: 100%;
@@ -79,8 +74,6 @@
                 border-radius: 4px;
                 animation: rights 2s linear;
             }
-            
         }
     }
 }
-
