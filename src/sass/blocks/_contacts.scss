@@ -63,9 +63,8 @@
     &__policy {
         font-size: 12px;
         line-height: 18px;
-        display: flex;
-        align-items: center;
-
+        position: relative;
+        top: 65%;
         input {
             margin-right: 8px;
         }
@@ -108,4 +107,11 @@
         background-color: $color-green;
         border-radius: 5px;
     }
+}
+
+.error {
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    color: red;
 }

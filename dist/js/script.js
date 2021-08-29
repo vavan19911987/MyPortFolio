@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-
+    "user strict";
 
     // смена цвета к иконок соцсети
     // let color = document.querySelectorAll('.colors');
@@ -13,7 +13,8 @@ window.addEventListener('DOMContentLoaded', function () {
     //     });
     // }
 
-    // сьена цвета кнопки
+    // ! сьена цвета кнопки
+
     let btn = document.querySelectorAll('.btn');
 
     for (let i = 0; i < btn.length; i++) {
@@ -24,6 +25,8 @@ window.addEventListener('DOMContentLoaded', function () {
             this.setAttribute("style", "background:none;");
         });
     }
+
+
     const hamburger = document.querySelector('.hamburger'),
         menu = document.querySelector('.menu'),
         close = document.querySelector('.menu__close'),
@@ -68,6 +71,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
     }
+
+    // ! изменение цвета sidepanel
+
     const sidepanelscroll = document.querySelector('.sidepanel');
     const divider = document.querySelector('.sidepanel__divider');
     const vk = document.querySelector('.icon-vk1');
@@ -131,6 +137,7 @@ window.addEventListener('DOMContentLoaded', function () {
         lines[i].style.width = item.innerHTML;
     });
 
+    // ! изменение цвета hamburger
 
     const hamburg = document.querySelector('.hamburger');
 
@@ -153,6 +160,13 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+
+
+
+
+
+
 
 
     new WOW().init();
