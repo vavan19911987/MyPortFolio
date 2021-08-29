@@ -68,11 +68,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
     }
-const sidepanelscroll = document.querySelector('.sidepanel');
-const divider = document.querySelector('.sidepanel__divider');
-const vk = document.querySelector('.icon-vk1');
-const instagram = document.querySelector('.icon-instagram');
-const whatsapp = document.querySelector('.icon-whatsapp');
+    const sidepanelscroll = document.querySelector('.sidepanel');
+    const divider = document.querySelector('.sidepanel__divider');
+    const vk = document.querySelector('.icon-vk1');
+    const instagram = document.querySelector('.icon-instagram');
+    const whatsapp = document.querySelector('.icon-whatsapp');
 
     if (sidepanelscroll) {
         sidepanelscroll.addEventListener('click', function name() {
@@ -85,32 +85,77 @@ const whatsapp = document.querySelector('.icon-whatsapp');
         window.addEventListener('scroll', function () {
             const scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrolled >= 445) {
+
+            if (scrolled >= 190) {
                 sidepanelscroll.classList.add('sidepanels');
-                divider.classList.add('dividers');
-                vk.classList.add('icon-vk2');
-                instagram.classList.add('icon-instagram2');
-                whatsapp.classList.add('icon-whatsapp2');
             } else {
                 sidepanelscroll.classList.remove('sidepanels');
-                divider.classList.remove('dividers');
-                vk.classList.remove('icon-vk2');
-                instagram.classList.remove('icon-instagram2');
-                whatsapp.classList.remove('icon-whatsapp2');
 
             }
+
+            if (scrolled >= 300) {
+                divider.classList.add('dividers');
+            } else {
+                divider.classList.remove('dividers');
+
+            }
+
+            if (scrolled >= 350) {
+                whatsapp.classList.add('icon-whatsapp2')
+            } else {
+                whatsapp.classList.remove('icon-whatsapp2');
+            }
+
+            if (scrolled >= 410) {
+                instagram.classList.add('icon-instagram2');
+            } else {
+                instagram.classList.remove('icon-instagram2');
+
+            }
+
+            if (scrolled >= 470) {
+                vk.classList.add('icon-vk2');
+            } else {
+                vk.classList.remove('icon-vk2');
+
+            }
+
         });
     }
 
+
     const counters = document.querySelectorAll('.skills__ratings-counter'),
-          lines = document.querySelectorAll('.skills__ratings-line span');
+        lines = document.querySelectorAll('.skills__ratings-line span');
 
     counters.forEach((item, i) => {
         lines[i].style.width = item.innerHTML;
     });
 
 
-new WOW().init();
+    const hamburg = document.querySelector('.hamburger');
+
+    if (hamburg) {
+        hamburg.addEventListener('click', function name() {
+            Event.preventDefault()
+            window.scrollTo({
+                top: 100,
+                behavior: 'smooth',
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrolled >= 625) {
+                hamburg.classList.add('hamburger-green');
+            } else {
+                hamburg.classList.remove('hamburger-green');
+            }
+        });
+    }
+
+
+    new WOW().init();
 
 });
 

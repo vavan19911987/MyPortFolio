@@ -1,5 +1,6 @@
 .hamburger {
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     height: 21px;
@@ -9,6 +10,7 @@
     align-items: flex-end;
     translate: 0.6s all;
     cursor: pointer;
+    z-index: 900;
     span {
         display: block;
         width: 30px;
@@ -24,4 +26,9 @@
     display: none;
 }
 
+.hamburger-green {
+    span {
+        background: $color-green;
+    }
+}
 
