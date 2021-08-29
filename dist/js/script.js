@@ -93,27 +93,27 @@ window.addEventListener('DOMContentLoaded', function () {
 
             }
 
-            if (scrolled >= 300) {
+            if (scrolled >= 295) {
                 divider.classList.add('dividers');
             } else {
                 divider.classList.remove('dividers');
 
             }
 
-            if (scrolled >= 350) {
-                whatsapp.classList.add('icon-whatsapp2')
+            if (scrolled >= 300) {
+                whatsapp.classList.add('icon-whatsapp2');
             } else {
                 whatsapp.classList.remove('icon-whatsapp2');
             }
 
-            if (scrolled >= 410) {
+            if (scrolled >= 320) {
                 instagram.classList.add('icon-instagram2');
             } else {
                 instagram.classList.remove('icon-instagram2');
 
             }
 
-            if (scrolled >= 470) {
+            if (scrolled >= 350) {
                 vk.classList.add('icon-vk2');
             } else {
                 vk.classList.remove('icon-vk2');
@@ -136,7 +136,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     if (hamburg) {
         hamburg.addEventListener('click', function name() {
-            Event.preventDefault()
+            Event.preventDefault();
             window.scrollTo({
                 top: 100,
                 behavior: 'smooth',
