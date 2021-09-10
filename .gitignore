@@ -8,6 +8,7 @@
 # mailer
 /src/mailer
 /dist/mailer
+myMailer.php
 
 #прочие
 /заметки

@@ -162,9 +162,37 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    // ! Валидация 
 
+    let validateForms = function (selector, rules, successModal, yaGoal) {
+        new window.JustValidate(selector, {
+            rules: rules,
+            submitHandler: function (form) {
+                let formData = new FormData(form);
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            console.log('отправлено');
+                        }
+                    }
+                };
+                xhr.open('POST', 'mailer/smart.php', true);
+                xhr.send(formData);
 
+                form.reset();
+            }
+        });
+    };
+    validateForms('.contacts__form', {
 
+        text: {
+            required: true,
+        },
+        checkbox: {
+            required: true,
+        }
+    }, 'thanks-popup', 'send goal');
 
 
 

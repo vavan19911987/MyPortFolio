@@ -1,11 +1,10 @@
 .container {
     width: 1140px;
     margin: 0 auto;
-
 }
 
 .none {
-    display: none; 
+    display: none;
 }
 
 .divider {
@@ -15,3 +14,9 @@
     margin: 25px auto 0 auto;
 }
 
+.js-validate-error-label {
+    position: relative;
+    text-align: center;
+    top: 5px;
+
+}

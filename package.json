@@ -1,7 +1,6 @@
 {
   "name": "portfoliowin",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,5 +23,15 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vavan19911987/PortFolioWin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vavan19911987/PortFolioWin/issues"
+  },
+  "homepage": "https://github.com/vavan19911987/PortFolioWin#readme",
+  "description": ""
 }
