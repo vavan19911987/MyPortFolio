@@ -18,5 +18,49 @@
     position: relative;
     text-align: center;
     top: 5px;
+}
 
+// ! кнопка вверх
+
+
+.back_to_top {
+    position: fixed;
+    bottom: 93px;
+    font-size: 18px;
+    color: green;
+    right: 50px;
+    z-index: 9999;
+    display: none;
+    cursor: pointer;
+
+}
+
+.up {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border: 5px solid $color-green;
+    border-left-color: $color-line;
+    border-right-color: $color-line;
+    border-radius: 50%;
+    bottom: 80px;
+    right: 40px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: rotor 1.3s linear infinite;
+    display: none;
+
+}
+
+
+
+// .back_to_top:hover {
+//     background: #e9ebec;
+// }
+
+.back_to_top-show {
+    display: block;
 }

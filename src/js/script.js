@@ -203,8 +203,8 @@ window.addEventListener('DOMContentLoaded', function () {
                             let modal = document.querySelector('.overlay');
                             modal.classList.add('thanks');
                             let closes = document.querySelector('.modal__close');
-                            closes.addEventListener('click', function() {           
-                            modal.classList.remove('thanks');
+                            closes.addEventListener('click', function () {
+                                modal.classList.remove('thanks');
                             });
                         }
                     }
@@ -232,6 +232,43 @@ window.addEventListener('DOMContentLoaded', function () {
             minLength: 2,
         }
     }, 'thanks-popup', 'send goal');
+
+
+
+    // ! кнопка вверх
+
+(function() {
+  
+    function trackScroll() {
+      var scrolled = window.pageYOffset;
+      var coords = document.documentElement.clientHeight;
+  
+      if (scrolled > coords) {
+        goTopBtn.classList.add('back_to_top-show');
+        rotor.classList.add('back_to_top-show');
+
+      }
+      if (scrolled < coords) {
+        goTopBtn.classList.remove('back_to_top-show');
+        rotor.classList.remove('back_to_top-show');
+
+      }
+    }
+  
+    function backToTop() {
+      if (window.pageYOffset > 0) {
+        window.scrollBy(0, -90);
+        setTimeout(backToTop, 0);
+      }
+    }
+  
+    let goTopBtn = document.querySelector('.back_to_top');
+    let rotor = document.querySelector('.up');
+  
+    window.addEventListener('scroll', trackScroll);
+    rotor.addEventListener('click', backToTop);
+    goTopBtn.addEventListener('click', backToTop);
+  })();
 
 
     new WOW().init();

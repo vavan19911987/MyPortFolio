@@ -145,6 +145,9 @@
     }
 }
 
+
+// ! Крестик закрытия модал
+
 @keyframes close {
     from {
         transform: scale(1);
@@ -156,5 +159,13 @@
     to {
         transform: scale(1);
 
+    }
+}
+
+// ! кнопка вверх
+
+@keyframes rotor {
+    100% {
+        transform: rotate(360deg);
     }
 }
