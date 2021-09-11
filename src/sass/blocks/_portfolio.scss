@@ -22,7 +22,7 @@
         transition: all 0.4s;
 
         &_wrapp {
-            position: relative;
+            // position: relative;
 
             h2 {
                 position: absolute;
@@ -47,8 +47,8 @@
         }
 
         &:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(16px 20px 20px $color-green);
+            transform: scale(0.9);
+            filter: drop-shadow(10px 10px 15px $color-green);
             h2 {
                 color: $color-black;
                 display: block;

@@ -7,6 +7,11 @@
     &__title {
         width: 550px;
         margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+        // &::before {
+            
+        // }
     }
     &__subtitle {
         position: relative;

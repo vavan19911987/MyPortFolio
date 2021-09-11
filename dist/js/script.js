@@ -164,16 +164,48 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // ! Валидация 
 
+
+
     let validateForms = function (selector, rules, successModal, yaGoal) {
         new window.JustValidate(selector, {
             rules: rules,
+
+            messages: {
+                name: {
+                    required: 'Введите Ваше Имя',
+                    minLength: 'Слишком короткое Имя',
+
+                },
+                email: {
+                    // remote: 'В веденные данные не верна',
+                    email: 'Введенные данные не верны!',
+                    required: 'Введите Вашу почту'
+
+                },
+                text: {
+                    required: 'Опишите задачу коротко',
+                    minLength: 'Введите сообшение минимум 20 символов',
+                },
+                checkbox: {
+                    required: 'Пожалуйста, подтвердите согласие',
+                }
+            },
+
+
             submitHandler: function (form) {
                 let formData = new FormData(form);
                 let xhr = new XMLHttpRequest();
+
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4) {
+
                         if (xhr.status === 200) {
-                            console.log('отправлено');
+                            let modal = document.querySelector('.overlay');
+                            modal.classList.add('thanks');
+                            let closes = document.querySelector('.modal__close');
+                            closes.addEventListener('click', function() {           
+                            modal.classList.remove('thanks');
+                            });
                         }
                     }
                 };
@@ -181,20 +213,25 @@ window.addEventListener('DOMContentLoaded', function () {
                 xhr.send(formData);
 
                 form.reset();
-            }
-        });
-    };
-    validateForms('.contacts__form', {
+            },
 
-        text: {
-            required: true,
-        },
+        });
+
+    };
+
+    validateForms('.contacts__form', {
         checkbox: {
             required: true,
+        },
+        text: {
+            required: true,
+            minLength: 20,
+        },
+        name: {
+            required: true,
+            minLength: 2,
         }
     }, 'thanks-popup', 'send goal');
-
-
 
 
     new WOW().init();
