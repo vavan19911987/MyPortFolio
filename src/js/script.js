@@ -47,6 +47,9 @@ window.addEventListener('DOMContentLoaded', function () {
         containers.classList.add('none');
         sidepanel.classList.add('none');
         hamburgers.classList.add('none');
+        goTopBtn.classList.remove('back_to_top-show');
+        rotor.classList.remove('back_to_top-show');
+
 
     });
     close.addEventListener('click', function () {

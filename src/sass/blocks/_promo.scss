@@ -10,7 +10,7 @@
         position: relative;
         overflow: hidden;
         // &::before {
-            
+
         // }
     }
     &__subtitle {
@@ -27,8 +27,9 @@
         align-items: center;
     }
     &__link {
-        @include bold ();
+        @include bold();
         color: $color-white;
     }
-    
-} 
+}
+
+

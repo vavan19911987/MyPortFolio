@@ -35,6 +35,8 @@
         top: 10px;
         right: 15px;
         cursor: pointer;
+        // animation: close 2s infinite;
+
     }
     &__nav {
         padding-left: 85px;
@@ -76,4 +78,35 @@
     }
 
 
+}
+
+
+.cog22 {
+    width: 500px;
+    height: 500px;
+    background: url(../img/cog_agbope.png) center/cover;
+    position: absolute;
+    right: 50%;
+    top: 26%;
+
+    animation: cog 6s linear infinite;
+}
+
+.cog11 {
+    width: 380px;
+    height: 380px;
+    left: 47%;
+    top: 29%;
+    background: url(../img/cog_agbope.png) center/cover;
+    position: absolute;
+
+    animation: cog 6s linear infinite reverse;
+}
+
+
+.dev2 {
+    position: absolute;
+    top: 9%;
+    left: 67%;
+    opacity: 0.05;
 }
