@@ -60,11 +60,6 @@ window.addEventListener('DOMContentLoaded', function () {
         containers.classList.remove('none');
         sidepanel.classList.remove('none');
         hamburgers.classList.remove('none');
-        if (scrolled > 550) {
-            goTopBtn.classList.add('back_to_top-show');
-            rotor.classList.add('back_to_top-show');
-    
-        }
     });
 
     for (let i = 0; i < menuNone.length; i++) {
@@ -265,9 +260,12 @@ window.addEventListener('DOMContentLoaded', function () {
         }
         close.addEventListener('click', function () {
             if (scrolled > 550) {
+                goTopBtn.classList.add('back_to_top-show');
+                rotor.classList.add('back_to_top-show');
+            }
+            if (scrolled < 550) {
                 goTopBtn.classList.remove('back_to_top-show');
                 rotor.classList.remove('back_to_top-show');
-        
             }
         });
     }
