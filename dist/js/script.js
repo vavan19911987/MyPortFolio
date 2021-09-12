@@ -60,6 +60,8 @@ window.addEventListener('DOMContentLoaded', function () {
         containers.classList.remove('none');
         sidepanel.classList.remove('none');
         hamburgers.classList.remove('none');
+        goTopBtn.classList.add('back_to_top-show');
+        rotor.classList.add('back_to_top-show');
     });
 
     for (let i = 0; i < menuNone.length; i++) {
