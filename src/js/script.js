@@ -152,9 +152,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
         window.addEventListener('scroll', function () {
             const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            let arrowUp = document.querySelector('arrow-up');
 
             if (scrolled >= 625) {
                 hamburg.classList.add('hamburger-green');
+
             } else {
                 hamburg.classList.remove('hamburger-green');
             }
@@ -237,38 +239,51 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // ! кнопка вверх
 
-(function() {
-  
+
+
     function trackScroll() {
-      var scrolled = window.pageYOffset;
-      var coords = document.documentElement.clientHeight;
-  
-      if (scrolled > coords) {
-        goTopBtn.classList.add('back_to_top-show');
-        rotor.classList.add('back_to_top-show');
+        let scrolled = window.pageYOffset;
+        //   let coords = document.documentElement.clientHeight;
 
-      }
-      if (scrolled < coords) {
-        goTopBtn.classList.remove('back_to_top-show');
-        rotor.classList.remove('back_to_top-show');
+        if (scrolled > 550) {
+            goTopBtn.classList.add('back_to_top-show');
+            rotor.classList.add('back_to_top-show');
 
-      }
+        }
+        if (scrolled < 550) {
+            goTopBtn.classList.remove('back_to_top-show');
+            rotor.classList.remove('back_to_top-show');
+
+        }
     }
-  
+
     function backToTop() {
-      if (window.pageYOffset > 0) {
-        window.scrollBy(0, -90);
-        setTimeout(backToTop, 0);
-      }
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -90);
+            setTimeout(backToTop, 0);
+        }
     }
-  
+
     let goTopBtn = document.querySelector('.back_to_top');
     let rotor = document.querySelector('.up');
-  
+
     window.addEventListener('scroll', trackScroll);
     rotor.addEventListener('click', backToTop);
     goTopBtn.addEventListener('click', backToTop);
-  })();
+
+
+    // ! LOADER
+
+
+    let mask = document.querySelector(".mask");
+
+    window.addEventListener("load", function () {
+        mask.classList.add("hide");
+        setTimeout(function () {
+            mask.remove();
+        }, 600);
+    });
+
 
 
     new WOW().init();
