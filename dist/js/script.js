@@ -60,8 +60,11 @@ window.addEventListener('DOMContentLoaded', function () {
         containers.classList.remove('none');
         sidepanel.classList.remove('none');
         hamburgers.classList.remove('none');
-        goTopBtn.classList.add('back_to_top-show');
-        rotor.classList.add('back_to_top-show');
+        if (scrolled > 550) {
+            goTopBtn.classList.add('back_to_top-show');
+            rotor.classList.add('back_to_top-show');
+    
+        }
     });
 
     for (let i = 0; i < menuNone.length; i++) {
@@ -260,6 +263,13 @@ window.addEventListener('DOMContentLoaded', function () {
             rotor.classList.remove('back_to_top-show');
 
         }
+        close.addEventListener('click', function () {
+            if (scrolled > 550) {
+                goTopBtn.classList.remove('back_to_top-show');
+                rotor.classList.remove('back_to_top-show');
+        
+            }
+        });
     }
 
     function backToTop() {
@@ -275,6 +285,9 @@ window.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', trackScroll);
     rotor.addEventListener('click', backToTop);
     goTopBtn.addEventListener('click', backToTop);
+
+
+
 
 
     // ! LOADER
