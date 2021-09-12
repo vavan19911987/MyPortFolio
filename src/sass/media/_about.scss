@@ -1,0 +1,19 @@
+@media (max-width: 1200px) {
+    .about {
+        &__photo {
+            margin-left: 35px;
+            img {
+                max-width: 390px;
+            }
+        }
+        &__text {
+            width: 620px;
+        }
+        &__wrapper {
+            column-gap: 50px;
+        }
+        &__skills {
+            column-gap: 31px;
+        }
+    }
+}

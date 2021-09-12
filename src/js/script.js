@@ -27,6 +27,8 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 
+
+
     const hamburger = document.querySelector('.hamburger'),
         menu = document.querySelector('.menu'),
         close = document.querySelector('.menu__close'),
