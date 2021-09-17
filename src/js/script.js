@@ -21,12 +21,12 @@ window.addEventListener('DOMContentLoaded', function () {
         btn[i].addEventListener('mouseover', function () {
             this.setAttribute("style", "background:green;");
         });
+
         btn[i].addEventListener('mouseout', function () {
             this.setAttribute("style", "background:none;");
         });
+
     }
-
-
 
 
     const hamburger = document.querySelector('.hamburger'),
@@ -274,7 +274,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function backToTop() {
         if (window.pageYOffset > 0) {
-            window.scrollBy(0, -90);
+            window.scrollBy(0, -190);
             setTimeout(backToTop, 0);
         }
     }
@@ -293,14 +293,14 @@ window.addEventListener('DOMContentLoaded', function () {
     // ! LOADER
 
 
-    let mask = document.querySelector(".mask");
+    // let mask = document.querySelector(".mask");
 
-    window.addEventListener("load", function () {
-        mask.classList.add("hide");
-        setTimeout(function () {
-            mask.remove();
-        }, 600);
-    });
+    // window.addEventListener("load", function () {
+    //     mask.classList.add("hide");
+    //     setTimeout(function () {
+    //         mask.remove();
+    //     }, 600);
+    // });
 
 
 

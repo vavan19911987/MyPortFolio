@@ -5,8 +5,8 @@
         grid-template-columns: 400px 670px;
         grid-template-rows: minmax(245px, auto) minmax(255px, auto);
         grid-auto-rows: minmax(245, auto);
-        // column-gap: 70px;
-        justify-content: space-around;
+        column-gap: 70px;
+        // justify-content: space-around;
         row-gap: 20px; // растояние между блоками
     }
     &__photo {
@@ -37,8 +37,8 @@
     }
     &__skills {
         display: grid;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-        // grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        // grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
 
         column-gap: 60px;
         row-gap: 15px;
