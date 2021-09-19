@@ -1,13 +1,9 @@
 @media (max-width: 1200px) {
     .skills {
         &__items {
-            // grid-template: repeat(1, minmax(270px, auto)) / repeat(4, 238px);
             grid-template: repeat(2,minmax(270px,auto))/repeat(2,343px);
             justify-content: center;
             gap: 45px;
-
-
-            // padding: 0;
         }
         &__ratings {
             justify-content: center;
@@ -19,7 +15,6 @@
         }
     }
 }
-
 @media (max-width: 992px) {
     .skills {
        .title {
@@ -42,7 +37,6 @@
             }
         }
     }
-
 }
 @media (max-width: 576px) {
     .skills {
@@ -52,7 +46,6 @@
         }
         &__ratings {
             grid-template: repeat(6, minmax(70px, auto)) / repeat(1, 290px);
-         
         }
     }
 }
