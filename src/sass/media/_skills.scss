@@ -27,11 +27,11 @@
 @media (max-width: 768px) {
     .skills {
         &__items {
-            grid-template: repeat(2,minmax(270px,auto))/repeat(2,311px);
+            grid-template: repeat(2,minmax(270px,auto))/repeat(2,255px);
             gap: 20px;
         }
         &__ratings {
-            grid-template: repeat(3, minmax(70px, auto)) / repeat(2, 290px);
+            grid-template: repeat(3, minmax(70px, auto)) / repeat(2, 255px);
             &-line {
                 width: 100%;
             }
