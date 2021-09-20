@@ -303,6 +303,9 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // let hover = document.querySelector(img::hover);
+
+
 
     new WOW().init();
 

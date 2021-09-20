@@ -5,9 +5,10 @@
         margin-top: 60px;
         padding: 0 10px;
         display: grid; // для увелечение колтчество items нужно прописать grid template auto
-        grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(3, 270px);
         grid-auto-rows: minmax(270px, auto);
         grid-template-rows: minmax(270px, auto);
+        justify-content: center;
         gap: 13px;
     }
     &__item {

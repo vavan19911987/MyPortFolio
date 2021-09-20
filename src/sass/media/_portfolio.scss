@@ -1,21 +1,21 @@
 @media (max-width: 1200px) {
     .portfolio {
         &__wrapper {
-            grid-template: repeat(2,280px)/repeat(auto-fit,280px);
+            grid-template: repeat(2, 280px) / repeat(auto-fit, 280px);
             grid-auto-rows: 280px;
             justify-content: space-around;
             row-gap: 15px;
         }
-        .horizonal, .vertical {
+        .horizonal,
+        .vertical {
             grid-row: unset;
             grid-column: unset;
+        }
     }
-}
 }
 @media (max-width: 768px) {
     .portfolio {
         padding-top: 40px;
         padding-bottom: 10px;
     }
-
 }
