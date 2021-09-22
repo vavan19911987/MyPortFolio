@@ -1,0 +1,28 @@
+.policy {
+    margin: 45px 45px 45px 45px;
+    padding-bottom: 40px;
+    h1 {
+        font-size: 35px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    h2 {
+        font-size: 16px;
+        @include bold;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        line-height: 20px;
+        color: rgb(250, 4, 4);
+    }
+    p {
+        font-size: 16px;
+        @include med;
+        line-height: 25px;
+
+    }
+    a {
+        color: $main-color;
+        text-decoration: underline;
+        @include bold;
+    }
+}
