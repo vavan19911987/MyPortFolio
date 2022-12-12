@@ -1,0 +1,71 @@
+<!-- ? SECTION 6 -->
+<!--	<section class="price" id="price">-->
+<!--		<div class="container">-->
+<!--			<h2 class="title title__fz16 title_fz16  title__section-title">Прайс-лист</h2>-->
+<!--			<div class="divider"></div>-->
+<!--			<div class="price__list">-->
+<!--				<div class="price__wrapper">-->
+<!--					<div class="price__item">-->
+<!--						<div class="price__title">Landing-page</div>-->
+<!--						<div class="price__count">от 8000 руб.</div>-->
+<!--						<div class="price__text">-->
+<!--							Одностраничный сайт для презентации услуг/товаров/...-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="price__item">-->
+<!--						<div class="price__title">Адаптивность</div>-->
+<!--						<div class="price__count">от 6000 руб.</div>-->
+<!--						<div class="price__text">-->
+<!--							Сделаю так что ваш сайт будет выглядеть на всех устройствах бузупречно-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="price__item">-->
+<!--						<div class="price__title">Правка чужого сайта</div>-->
+<!--						<div class="price__count">от 10000 руб.</div>-->
+<!--						<div class="price__text">-->
+<!--							Создавать и творить произведение искусства это тяжелый труд, а исправлять чужие ошибки это-->
+<!--							адский труд.-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="price__item">-->
+<!--						<div class="price__title">Админка сайта</div>-->
+<!--						<div class="price__count">от 10000 руб.мес</div>-->
+<!--						<div class="price__text">-->
+<!--							Поддержка сайта на протяжении всей его жизни.-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
+
+
+
+<div class="overlay">
+		<div class="modal" id="order">
+        			<div class="modal__subtitle">ОБРАТНАЯ СВЯЗЬ</div>
+
+			<div class="modal__close">&times;</div>
+			
+
+
+			<form  action="#" enctype="multipart/form-data" class="feed-form" id="form">
+				<labe for="name" class="label">Ваше имя*</labe>
+				<input name="name" required type="text">
+
+				<labe class="label">Телефон*</labe>
+				<input name="phone" required>
+
+				<labe for="email" class="label">Ваше имя*</labe>
+				<input name="email" id="email" type="email" data-validate-field='email'>
+
+                
+				<textarea name="text" data-validate-field="text" class="textarea" id="text"></textarea>
+
+				<button class="button button_form">Отправить</button>
+
+			</form>
+
+
+		</div>
+	</div>

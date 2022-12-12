@@ -7,12 +7,16 @@
     &__title {
         width: 550px;
         margin-top: 10px;
+        font-size: 16px;
+
+
     }
     &__subtitle {
         position: relative;
         padding-left: 10px;
         z-index: 2;
         @include before_circle;
+
     }
     &__btns {
         margin-top: 25px;
@@ -27,4 +31,65 @@
     }
 }
 
+/*Капля*/
+
+.drop {
+    z-index: 2;
+    position: absolute;
+    //right: 128px;
+    //left: 179px;
+    //top: 38px;
+    left: -7px;
+    top: -191px;
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    border-radius: 0 25px 25px 25px;
+    transform: rotate(45deg) skewY(0deg);
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.2);
+    animation: drop 2s linear;
+}
+
+.drop:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    height: 55%;
+    width: 35%;
+    border-radius: 100%;
+}
+
+@keyframes drop {
+    0% {
+        top: 38px;
+        border-radius: 50px;
+        transform: rotate(45deg) skewY(0deg);
+    }
+    50% {
+        top: 58px;
+        border-radius: 5px 25px 25px 25px;
+    }
+    90% {
+        top: 60px;
+        border-radius: 5px 25px 25px 25px;
+        transform: rotate(40deg) skewY(10deg);
+    }
+    95% {
+        top: calc(100% - 20px);
+        border-radius: 5px 25px 25px 25px;
+        transform: rotate(40deg) skewY(10deg);
+    }
+    98% {
+        top: calc(100% - 40px);
+        border-radius: 10px 25px 25px 25px;
+        transform: rotate(0deg) skewY(0deg) scale(0.7, 1);
+    }
+    100% {
+        top: calc(100% - 40px);
+        border-radius: 10px 25px 25px 25px;
+        transform: rotate(0deg) skewY(0deg) scale(3, 0.1);
+    }
+}
 
